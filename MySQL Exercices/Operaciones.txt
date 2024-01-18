@@ -211,6 +211,20 @@ FROM pedidos
 JOIN los_precios ON pedidos.id_articulo = los_precios.id_articulo
 GROUP BY id_cliente;
 
+-- Obtener los precios
+
+ select max(precio)
+     from los_precios;
+
+ select min(precio)
+     from los_precios;
+
+SELECT precio FROM los_precios WHERE precio BETWEEN 500 AND 1500;
+
+SELECT precio AS "precios entre 500 y 1500"
+FROM los_precios
+WHERE precio BETWEEN 500 AND 1500;
+
 
 
 
