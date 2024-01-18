@@ -193,6 +193,29 @@ SELECT* FROM articulos AS A
 JOIN facturas AS f
 ON a.IDArticulo = f.IDArticulo;
 
+-- Creando las vistas
+
+CREATE VIEW `los_precios` AS
+SELECT precio FROM laboratorio_eduit.articulos;
+
+SELECT * FROM los_precios;
+
+-- Filtrar las vistas
+
+SELECT * FROM los_precios WHERE precio > 100;
+
+-- Si se crease una tabla de pedidos 
+
+SELECT id_cliente, MAX(precio) AS max_precio
+FROM pedidos
+JOIN los_precios ON pedidos.id_articulo = los_precios.id_articulo
+GROUP BY id_cliente;
+
+
+
+
+
+
 
 
 
