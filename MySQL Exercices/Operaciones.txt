@@ -1,3 +1,4 @@
+
 CREATE TABLE Facturas (
     Letra CHAR,
     Numero INT,
@@ -225,14 +226,39 @@ SELECT precio AS "precios entre 500 y 1500"
 FROM los_precios
 WHERE precio BETWEEN 500 AND 1500;
 
+SELECT precio AS "precios entre 500 y 1500", nombre as "producto"
+FROM articulos
+WHERE precio BETWEEN 500 AND 1500;
+
+SELECT* precio AS "precios entre 500 y 1500", nombre as "producto"
+FROM articulos;
+
+-- Crear una llave foranea
+
+CREATE TABLE Orders (
+    or	der_id INT PRIMARY KEY,
+    IDCliente INT,
+    order_date DATE,
+    FOREIGN KEY (IDCliente) REFERENCES Clientes (IDCliente)
+);
 
 
+-- Buscar valores nulos o no nulos
+ 
+SELECT* FROM clientes WHERE Dirección IS NULL;
+SELECT* FROM clientes WHERE Dirección IS NULL LIMIT 2;
+SELECT* FROM clientes WHERE Dirección IS NOT NULL;
 
+-- Formas de ordenar los datos
 
+SELECT* FROM articulos
+ORDER BY precio ASC;
 
+SELECT* FROM articulos
+ORDER BY precio DESC;
 
-
-
+SELECT* FROM articulos
+ORDER BY precio DESC;
 
 
 
