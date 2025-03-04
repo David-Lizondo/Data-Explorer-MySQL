@@ -1,4 +1,5 @@
 -- Tabla para Comida
+
 CREATE TABLE Comida (
     id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(50) UNIQUE NOT NULL,
@@ -22,6 +23,7 @@ INSERT INTO Comida (codigo, nombre_producto, precio, fecha_vencimiento, stock, p
 ('C010', 'Yogurt', 1.80, '2025-07-15', 45, 'Proveedor B');
 
 -- Tabla para Artículos de Limpieza
+
 CREATE TABLE Articulos_Limpieza (
     id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(50) UNIQUE NOT NULL,
@@ -45,6 +47,7 @@ INSERT INTO Articulos_Limpieza (codigo, nombre_producto, precio, marca, stock, p
 ('L010', 'Guantes', 2.00, 'Marca A', 95, 'Proveedor X');
 
 -- Tabla para Productos de Higiene
+
 CREATE TABLE Productos_Higiene (
     id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(50) UNIQUE NOT NULL,
@@ -68,6 +71,7 @@ INSERT INTO Productos_Higiene (codigo, nombre_producto, precio, tipo, stock, pro
 ('H010', 'Toallas húmedas', 3.00, 'Piel', 95, 'Proveedor M');
 
 -- Tabla para Jardinería
+
 CREATE TABLE Jardineria (
     id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(50) UNIQUE NOT NULL,
